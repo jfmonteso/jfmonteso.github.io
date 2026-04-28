@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juego de los Chinos</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 60px 20px;
+           background: #FDF3E3; margin: 0; }
+    h2 { color: #8B4513; font-size: 1.8em; }
+    .code { font-size: 2em; font-weight: bold; letter-spacing: 8px;
+            color: #5C2D0A; background: white; padding: 16px 24px;
+            border-radius: 12px; display: inline-block; margin: 16px 0; }
+    .room { font-size: 1.2em; color: #5C2D0A; font-weight: 600; }
+    .btn { display: inline-block; margin-top: 24px; background: #4CAF50;
+           color: white; padding: 14px 28px; border-radius: 8px;
+           text-decoration: none; font-size: 16px; }
+    .hint { margin-top: 20px; color: #888; font-size: 13px; line-height: 1.6; }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get('code') || '——';
+      const room = params.get('room') || '';
+      document.getElementById('code').textContent = code;
+      if (room) {
+        document.getElementById('room').textContent = room;
+        document.getElementById('room-section').style.display = 'block';
+      }
+    });
+  </script>
+</head>
+<body>
+  <h2>🪙 Juego de los Chinos</h2>
+  <p>Te han invitado a una partida</p>
+  <div id="room-section" style="display:none">
+    <p>Sala: <span class="room" id="room"></span></p>
+  </div>
+  <p>Código:</p>
+  <div class="code" id="code">——</div>
+  <br>
+  <a class="btn"
+     href="https://play.google.com/store/apps/details?id=com.titogamingcompany.juego_chinos">
+    Descargar en Google Play
+  </a>
+  <p class="hint">
+    ¿Ya tienes el juego instalado?<br>
+    Abre la app y usa el código de arriba para unirte.
+  </p>
+</body>
+</html>
