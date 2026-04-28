@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.titogamingcompany.juego_chinos",
+    "sha256_cert_fingerprints": ["0A:3A:82:E5:E5:D7:32:9D:D5:D7:36:08:10:01:44:BD:1A:8D:6B:35:44:67:36:F3:56:2C:49:40:72:9F:29:7D"]
+  }
+}]
